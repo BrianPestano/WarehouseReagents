@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<!-- StackPane que sirve como contenedor principal -->
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventariooiubo.Usuario.Notausuario">
+    <children>
+        <!-- Panel con opacidad y efecto de ajuste de color -->
+        <Pane fx:id="notastextArea" opacity="0.9" prefHeight="549.0" prefWidth="1168.0">
+            <children>
+                <!-- Logotipo de la universidad -->
+                <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="23.0" layoutY="463.0">
+                    <image>
+                        <Image url="@../Imagenes/logo_LL.png" />
+                    </image>
+                </ImageView>
+            <MenuBar prefHeight="31.0" prefWidth="1168.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Listado\List">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#EntrarListado" text="Listado\List" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Cerrar Sesion\Log out">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#CerrarSesion" text="Cerrar sesión\Log out" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+
+                <!-- Etiqueta y separador -->
+                <Label layoutX="23.0" layoutY="120.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Nombre\Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Separator maxWidth="250.0" orientation="HORIZONTAL" />
+
+                <!-- Campo de texto para el nombre del grupo -->
+                <TextField fx:id="nombregrupo_crear" layoutX="157.0" layoutY="115.0" maxWidth="372.0" prefHeight="27.0" prefWidth="361.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+
+                <!-- Botón para crear el grupo -->
+                <Button layoutX="400.0" layoutY="406.0" mnemonicParsing="false" onAction="#Añadir" prefHeight="38.0" prefWidth="127.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Añadir\Add">
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                    </padding>
+                </Button>
+
+                <!-- Etiqueta y campo de texto para contraseña -->
+                <Label layoutX="23.0" layoutY="165.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Comentario\Comment">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+
+                <!-- Áreas de texto para mostrar información -->
+                <TextArea fx:id="comentarionota" layoutX="611.0" layoutY="120.0" prefHeight="284.0" prefWidth="489.0" />
+                <Label layoutX="256.0" layoutY="38.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Crear notas \Create notes">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="777.0" layoutY="55.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Consult notes\Consultar notas">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            <Button layoutX="967.0" layoutY="425.0" mnemonicParsing="false" onAction="#Todos" prefHeight="38.0" prefWidth="133.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Todos\All">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </padding>
+            </Button>
+            <TextField fx:id="nombrebuscar" layoutX="757.0" layoutY="84.0" maxWidth="372.0" onKeyReleased="#buscarPersona" prefHeight="27.0" prefWidth="226.0" promptText="Buscar por nombre\Search for name" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <TextField fx:id="notasTextArea" layoutX="166.0" layoutY="189.0" maxWidth="372.0" prefHeight="206.0" prefWidth="361.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Label layoutX="102.0" layoutY="76.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id_notas" layoutX="157.0" layoutY="71.0" maxWidth="372.0" prefHeight="27.0" prefWidth="361.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+            </children>
+        </Pane>
+    </children>
+</StackPane>

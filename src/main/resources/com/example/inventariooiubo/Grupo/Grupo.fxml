@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventariooiubo.Grupo.Grupo">
+    <children>
+        <!-- Panel con opacidad y efecto de ajuste de color -->
+        <Pane opacity="0.9" prefHeight="549.0" prefWidth="1168.0">
+            <children>
+                <MenuBar prefHeight="31.0" prefWidth="1168.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Notas\Notes">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#EntrarNotas" text="Notas\Notes" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Listado\List">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#EntrarListado" text="Listado\List" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Cerrar Sesion\Log out">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#CerrarSesion" text="Cerrar sesión\Log out" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <!-- Logotipo de la universidad -->
+                <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="23.0" layoutY="463.0">
+                    <image>
+                        <Image url="@../Imagenes/logo_LL.png" />
+                    </image>
+                </ImageView>
+
+                <!-- Etiqueta y separador -->
+                <!-- Etiqueta y separador -->
+                <Label layoutX="37.0" layoutY="157.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Nombre\Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Separator maxWidth="250.0" orientation="HORIZONTAL" />
+
+                <!-- Campo de texto para el nombre del grupo -->
+                <TextField fx:id="cas" layoutX="145.0" layoutY="112.0" maxWidth="356.0" prefHeight="27.0" prefWidth="219.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+
+                <!-- Botón para crear el grupo -->
+                <Button layoutX="372.0" layoutY="254.0" mnemonicParsing="false" onAction="#crearReactivo" prefHeight="38.0" prefWidth="140.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Crear\Create">
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                    </padding>
+                </Button>
+
+
+                <Label layoutX="375.0" layoutY="54.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="ID">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="volumen" layoutX="633.0" layoutY="152.0" maxWidth="356.0" prefHeight="27.0" prefWidth="173.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <TextField fx:id="idborarr" layoutX="301.0" layoutY="339.0" maxWidth="326.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+
+                <!-- Botón para borrar grupos -->
+                <Button layoutX="496.0" layoutY="457.0" mnemonicParsing="false" onAction="#borrarReactivo" prefHeight="38.0" prefWidth="140.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Borrar\Delete">
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Label layoutX="53.0" layoutY="309.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Borrar reactivo\Delete reagent">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="39.0" layoutY="54.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Crear Reactivo\ Create reagent ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nombre" layoutX="145.0" layoutY="152.0" maxWidth="356.0" prefHeight="27.0" prefWidth="356.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <TextField fx:id="Cantidad" layoutX="960.0" layoutY="152.0" maxWidth="356.0" prefHeight="27.0" prefWidth="173.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <TextField fx:id="localizacion" layoutX="501.0" layoutY="112.0" maxWidth="356.0" prefHeight="27.0" prefWidth="356.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <Label layoutX="514.0" layoutY="157.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Volumen\Volume">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="835.0" layoutY="157.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Cantidad\Amount">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="869.0" layoutY="117.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Grupo\group">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="32.0" layoutY="292.0" style="-fx-font-weight: bold; -fx-font-size: 12px;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="371.0" layoutY="117.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Localizacion\Location">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="grupo" layoutX="952.0" layoutY="112.0" maxWidth="356.0" prefHeight="27.0" prefWidth="173.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <CheckBox fx:id="privado" layoutX="627.0" layoutY="205.0" mnemonicParsing="false" text="Privado \Private" />
+                <CheckBox fx:id="comunes" layoutX="795.0" layoutY="205.0" mnemonicParsing="false" text="Comunes\Common" />
+                <Label layoutX="129.0" layoutY="344.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Introduce el ID\Enter the ID">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Button layoutX="489.0" layoutY="333.0" mnemonicParsing="false" onAction="#comprobarIdBorrar" prefHeight="38.0" prefWidth="177.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Comprobar\Find out">
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                    </padding>
+                </Button>
+                <TextArea fx:id="vercomprovacion" layoutX="127.0" layoutY="379.0" prefHeight="116.0" prefWidth="356.0" />
+                <Label layoutX="37.0" layoutY="205.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="Proveedor\Supplier">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="proveedor" layoutX="194.0" layoutY="200.0" maxWidth="356.0" prefHeight="27.0" prefWidth="356.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <Button fx:id="actualizar" layoutX="566.0" layoutY="254.0" mnemonicParsing="false" onAction="#actualizarReactivo" prefHeight="38.0" prefWidth="156.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Actualizar\Update">
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                    </padding>
+                </Button>
+                <TextField fx:id="IDCREAR" layoutX="421.0" layoutY="49.0" maxWidth="326.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+                <Button layoutX="627.0" layoutY="45.0" mnemonicParsing="false" onAction="#Comprobar" prefHeight="38.0" prefWidth="173.0" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="Comprobar\Find out">
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Label layoutX="42.0" layoutY="117.0" style="-fx-font-weight: bold; -fx-font-size: 12px;" text="CAS">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="22.0" layoutY="299.0" prefHeight="3.0" prefWidth="1123.0" />
+            </children>
+        </Pane>
+    </children>
+
+</StackPane>

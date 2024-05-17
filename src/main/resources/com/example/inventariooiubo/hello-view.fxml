@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventariooiubo.HelloController">
+<!-- Establece el fondo blanco -->
+<style>
+    -fx-background-color: #ffffff;
+</style>
+<children>
+    <!-- Título y estilo del título -->
+    <Label layoutX="440.0" layoutY="154.0" style="-fx-font-weight: bold; -fx-font-size: 18px;" text="INICIA SESIÓN CON TU CUENTA" />
+
+    <!-- Separador horizontal con un ancho máximo de 250.0 -->
+    <Separator maxWidth="250.0" orientation="HORIZONTAL" />
+
+    <!-- Campo de texto para el usuario -->
+    <TextField fx:id="usernameField" layoutX="480.0" layoutY="231.0" maxWidth="250.0" prefHeight="27.0" prefWidth="192.0" promptText="Usuario\User" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+
+    <!-- Campo de contraseña -->
+    <PasswordField fx:id="passwordField" layoutX="480.0" layoutY="295.0" maxWidth="250.0" prefHeight="26.0" prefWidth="192.0" promptText="Contraseña\Password" style="-fx-background-radius: 10 10 10 10; -fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-border-color: #000000; -fx-border-width: 1;" />
+
+    <!-- Botón de entrada -->
+    <Button fx:id="botonEntrar" layoutX="345.0" layoutY="373.0" mnemonicParsing="false" onAction="#entrar" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="ENTRAR\ENTER">
+        <padding>
+            <!-- Añade un espacio en el botón -->
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <!-- Botón de salida -->
+    <Button fx:id="botonSalir" layoutX="611.0" layoutY="373.0" mnemonicParsing="false" onAction="#salir" style="-fx-background-radius: 20 20 20 20; -fx-text-fill: white; -fx-background-color: #2E2B3F;" text="SALIR\EXIT">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <!-- Imagen de la sede -->
+    <ImageView fitHeight="152.0" fitWidth="152.0" layoutX="960.0" layoutY="22.0">
+        <image>
+            <Image url="@Imagenes/sede2.png" />
+        </image>
+    </ImageView>
+
+    <!-- Imagen del logotipo -->
+    <ImageView fitHeight="95.0" fitWidth="285.0" layoutX="25.0" layoutY="22.0">
+        <image>
+            <Image url="@Imagenes/ull_logo2.png" />
+        </image>
+    </ImageView>
+      <Label layoutX="446.0" layoutY="181.0" style="-fx-font-weight: bold; -fx-font-size: 18px;" text="LOG IN WITH YOUR ACCOUNT" />
+
+</children>
+</Pane>
