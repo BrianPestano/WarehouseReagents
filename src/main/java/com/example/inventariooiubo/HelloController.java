@@ -10,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -111,7 +110,7 @@ public class HelloController {
     private void cargarVistaAdministrador(ActionEvent event) {
         try {
             // Cargar el FXML de la vista de administrador
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/inventariooiubo/Administracion/Listadoadmin.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/inventariooiubo/Administracion/listadoadmin.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
@@ -124,7 +123,7 @@ public class HelloController {
     private void cargarVistagrupo(ActionEvent event) {
         try {
             // Cargar el FXML de la vista de administrador
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/inventariooiubo/Grupo/Listadogrupo.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/inventariooiubo/Grupo/listadogrupo.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
